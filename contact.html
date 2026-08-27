@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Kontak - Muh safaat Portfolio</title>
+    <style>
+      .contact {
+        padding: 50px 20px;
+        color: white;
+        min-height: 90vh;
+        text-align: center;
+      }
+      .contact-container {
+        max-width: 600px;
+        margin: auto;
+        background: rgba(7, 123, 50, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        border: 2px solid #077b32;
+      }
+      .contact-container input,
+      .contact-container textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #077b32;
+        border-radius: 5px;
+        background: transparent;
+        color: white;
+      }
+      .contact-container button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        border: none;
+        background: #077b32;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+      .contact-container button:hover {
+        background: #065b27;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+          Web <span>Muh Safaat</span>
+        </div>
+        <div class="links">
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="100"
+          >
+            <a href="index.html">Beranda</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="200"
+          >
+            <a href="about.html">Tentang</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="300"
+          >
+            <a href="skills.html">Keahlian</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="400"
+          >
+            <a href="services.html">Layanan</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="500"
+          >
+            <a href="contact.html">Kontak</a>
+          </div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+      </div>
+      <div class="dropdown">
+        <div class="links">
+          <a href="index.html">Beranda</a>
+          <a href="about.html">Tentang</a>
+          <a href="skills.html">Keahlian</a>
+          <a href="services.html">Layanan</a>
+          <a href="contact.html">Kontak</a>
+          <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+        </div>
+      </div>
+    </nav>
+
+    <section class="contact">
+      <h1
+        data-aos="fade-down"
+        data-aos-duration="1500"
+        style="margin-bottom: 30px"
+      >
+        Hubungi Saya
+      </h1>
+      <div
+        class="contact-container"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+      >
+        <form id="contactForm">
+          <input type="text" name="name" placeholder="Nama Anda" required />
+          <input type="email" name="email" placeholder="Email Anda" required />
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Pesan Anda"
+            required
+          ></textarea>
+          <button type="submit">Kirim Pesan</button>
+        </form>
+
+        <script>
+          document
+            .getElementById("contactForm")
+            .addEventListener("submit", function (e) {
+              e.preventDefault(); // Mencegah reload halaman
+
+              let formData = new FormData(this);
+
+              fetch("process_contact.php", {
+                method: "POST",
+                body: formData,
+              })
+                .then((response) => response.json())
+                .then((data) => {
+                  if (data.status === "success") {
+                    Swal.fire({
+                      icon: "success",
+                      title: "Berhasil!",
+                      text: data.message,
+                    });
+                    document.getElementById("contactForm").reset();
+                  } else {
+                    Swal.fire({
+                      icon: "error",
+                      title: "Oops...",
+                      text: data.message,
+                    });
+                  }
+                })
+                .catch((error) => {
+                  Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Terjadi kesalahan, coba lagi nanti.",
+                  });
+                });
+            });
+        </script>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ offset: 0 });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

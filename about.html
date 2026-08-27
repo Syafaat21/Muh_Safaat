@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tentang - Muh Safaat Portfolio</title>
+    <style>
+      .certificates {
+        padding: 50px 20px;
+        text-align: center;
+        min-height: 90vh;
+      }
+      .cert-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-top: 30px;
+      }
+      .cert-card {
+        width: 300px;
+        background: rgba(7, 123, 50, 0.1);
+        border: 2px solid #077b32;
+        border-radius: 10px;
+        padding: 20px;
+        transition: 0.3s;
+      }
+      .cert-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 0 20px #077b32;
+      }
+      .cert-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+      .cert-card h3 {
+        color: #fff;
+        margin: 15px 0;
+      }
+      .cert-card p {
+        color: #ccc;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+          Web <span>Muh Safaat</span>
+        </div>
+        <div class="links">
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="100"
+          >
+            <a href="index.html">Beranda</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="200"
+          >
+            <a href="about.html">Tentang</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="300"
+          >
+            <a href="skills.html">Keahlian</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="400"
+          >
+            <a href="services.html">Layanan</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="500"
+          >
+            <a href="contact.html">Kontak</a>
+          </div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+      </div>
+      <div class="dropdown">
+        <div class="links">
+          <a href="index.html">Beranda</a>
+          <a href="about.html">Tentang</a>
+          <a href="skills.html">Keahlian</a>
+          <a href="services.html">Layanan</a>
+          <a href="contact.html">Kontak</a>
+          <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+        </div>
+      </div>
+    </nav>
+
+    <section class="certificates">
+      <h1
+        data-aos="fade-down"
+        data-aos-duration="1500"
+        style="color: #fff; margin-bottom: 30px"
+      >
+        Sertifikat Pembelajaran By Udemy
+      </h1>
+      <div class="cert-container">
+        <div
+          class="cert-card"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="100"
+        >
+          <img src="Py.jpg" alt="Sertifikat 1" />
+          <h3>Sertifikat Python</h3>
+          <p>Learn Python Version 3.13</p>
+        </div>
+        <div
+          class="cert-card"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="200"
+        >
+          <img src="php.jpg" alt="Sertifikat 2" />
+          <h3>Sertifikat PHP</h3>
+          <p>Pemrograman PHP Untuk Pemula</p>
+        </div>
+        <div
+          class="cert-card"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="300"
+        >
+          <img src="MTF.jpg" alt="Sertifikat 3" />
+          <h3>Sertifikat MTF</h3>
+          <p>Executive Diploma of Chief Technology Officer</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ offset: 0 });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

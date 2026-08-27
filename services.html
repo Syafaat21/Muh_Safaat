@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Layanan - Muh Safaat Portfolio</title>
+    <style>
+      .services {
+        padding: 50px 20px;
+        color: white;
+        min-height: 90vh;
+      }
+      .services-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 30px;
+      }
+      .service-card {
+        width: 300px;
+        background: rgba(7, 123, 50, 0.1);
+        border: 2px solid #077b32;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        transition: 0.3s;
+      }
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 0 20px #077b32;
+      }
+      .service-card i {
+        font-size: 3rem;
+        color: #077b32;
+        margin-bottom: 15px;
+      }
+      .service-card h3 {
+        margin-bottom: 10px;
+      }
+      .service-card p {
+        color: #ccc;
+        font-size: 0.9rem;
+      }
+      .cta {
+        text-align: center;
+        margin-top: 40px;
+      }
+      .cta a {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #077b32;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+      .cta a:hover {
+        background: #055a24;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+          Web <span>Muh Safaat</span>
+        </div>
+        <div class="links">
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="100"
+          >
+            <a href="index.html">Beranda</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="200"
+          >
+            <a href="about.html">Tentang</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="300"
+          >
+            <a href="skills.html">Keahlian</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="400"
+          >
+            <a href="services.html">Layanan</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="500"
+          >
+            <a href="contact.html">Kontak</a>
+          </div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+      </div>
+      <div class="dropdown">
+        <div class="links">
+          <a href="index.html">Beranda</a>
+          <a href="about.html">Tentang</a>
+          <a href="skills.html">Keahlian</a>
+          <a href="services.html">Layanan</a>
+          <a href="contact.html">Kontak</a>
+          <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+        </div>
+      </div>
+    </nav>
+
+    <section class="services">
+      <h1
+        data-aos="fade-down"
+        data-aos-duration="1500"
+        style="text-align: center; margin-bottom: 30px"
+      >
+        Layanan Saya
+      </h1>
+      <div class="services-container">
+        <div
+          class="service-card"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="100"
+        >
+          <i class="fas fa-code"></i>
+          <h3>Web Development</h3>
+          <p>
+            Membangun website yang responsif dan dinamis sesuai kebutuhan bisnis
+            Anda.
+          </p>
+        </div>
+        <div
+          class="service-card"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="200"
+        >
+          <i class="fas fa-paint-brush"></i>
+          <h3>UI/UX Design</h3>
+          <p>
+            Desain antarmuka yang menarik dan pengalaman pengguna yang optimal.
+          </p>
+        </div>
+        <div
+          class="service-card"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="300"
+        >
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Mobile App Development</h3>
+          <p>
+            Mengembangkan aplikasi mobile untuk Android dan iOS dengan performa
+            tinggi.
+          </p>
+        </div>
+        <div
+          class="service-card"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="400"
+        >
+          <i class="fas fa-search"></i>
+          <h3>SEO Optimization</h3>
+          <p>
+            Meningkatkan peringkat website di mesin pencari dengan teknik SEO
+            terbaik.
+          </p>
+        </div>
+        <div
+          class="service-card"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="500"
+        >
+          <i class="fas fa-shopping-cart"></i>
+          <h3>E-commerce Development</h3>
+          <p>Membantu bisnis Anda memiliki toko online yang cepat dan aman.</p>
+        </div>
+        <div
+          class="service-card"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="600"
+        >
+          <i class="fas fa-cogs"></i>
+          <h3>Maintenance & Support</h3>
+          <p>
+            Menyediakan perawatan dan dukungan untuk memastikan website tetap
+            optimal.
+          </p>
+        </div>
+      </div>
+      <div
+        class="cta"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        data-aos-delay="700"
+      >
+        <a href="contact.html">Hubungi Saya</a>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ offset: 0 });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

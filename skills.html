@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tentang - Muh Safaat Portfolio</title>
+    <style>
+      .skills {
+        padding: 50px 20px;
+        color: white;
+        text-align: center;
+      }
+      .skill-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        max-width: 800px;
+        margin: auto;
+      }
+      .skill-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        border: 2px solid #077b32;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: bold;
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .skill-box i {
+        font-size: 1.5rem;
+        margin-right: 10px;
+      }
+      .html5 {
+        color: #e34f26;
+      }
+      .css3 {
+        color: #1572b6;
+      }
+      .js {
+        color: #f7df1e;
+      }
+      .php {
+        color: #777bb4;
+      }
+      .laravel {
+        color: #ff2d20;
+      }
+      .codeigniter {
+        color: #ee4623;
+      }
+      .vuejs {
+        color: #42b883;
+      }
+      .reactjs {
+        color: #61dafb;
+      }
+      .nodejs {
+        color: #83cd29;
+      }
+      .alpinejs {
+        color: #8bc0d0;
+      }
+      .bootstrap {
+        color: #7952b3;
+      }
+      .python {
+        color: #3776ab;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+          Web <span>Muh Safaat</span>
+        </div>
+        <div class="links">
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="100"
+          >
+            <a href="index.html">Beranda</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="200"
+          >
+            <a href="about.html">Tentang</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="300"
+          >
+            <a href="skills.html">Keahlian</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="400"
+          >
+            <a href="services.html">Layanan</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="500"
+          >
+            <a href="contact.html">Kontak</a>
+          </div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+      </div>
+      <div class="dropdown">
+        <div class="links">
+          <a href="index.html">Beranda</a>
+          <a href="about.html">Tentang</a>
+          <a href="skills.html">Keahlian</a>
+          <a href="services.html">Layanan</a>
+          <a href="contact.html">Kontak</a>
+          <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+        </div>
+      </div>
+    </nav>
+
+    <section class="skills">
+      <h1 data-aos="fade-down" data-aos-duration="1500">Keahlian Saya</h1>
+      <div class="skill-container">
+        <div class="skill-box" data-aos="fade-up" data-aos-duration="1500">
+          <i class="fab fa-html5 html5"></i> HTML
+        </div>
+        <div class="skill-box" data-aos="fade-up" data-aos-duration="1500">
+          <i class="fab fa-css3-alt css3"></i> CSS
+        </div>
+        <div class="skill-box" data-aos="fade-up" data-aos-duration="1500">
+          <i class="fab fa-js js"></i> JavaScript
+        </div>
+        <div class="skill-box" data-aos="fade-up" data-aos-duration="1500">
+          <i class="fab fa-php php"></i> PHP
+        </div>
+        <div class="skill-box" data-aos="fade-up" data-aos-duration="1500">
+          <i class="fab fa-laravel laravel"></i> Laravel
+        </div>
+        <div class="skill-box" data-aos="fade-up" data-aos-duration="1500">
+          <i class="fas fa-fire codeigniter"></i> CodeIgniter
+        </div>
+        <div class="skill-box" data-aos="fade-up" data-aos-duration="1500">
+          <i class="fab fa-vuejs vuejs"></i> VueJS
+        </div>
+        <div class="skill-box" data-aos="fade-up" data-aos-duration="1500">
+          <i class="fab fa-react reactjs"></i> ReactJS
+        </div>
+        <div class="skill-box" data-aos="fade-up" data-aos-duration="1500">
+          <i class="fab fa-node-js nodejs"></i> NodeJS
+        </div>
+        <div class="skill-box" data-aos="fade-up" data-aos-duration="1500">
+          <i class="fas fa-code alpinejs"></i> AlpineJS
+        </div>
+        <div class="skill-box" data-aos="fade-up" data-aos-duration="1500">
+          <i class="fab fa-bootstrap bootstrap"></i> Bootstrap
+        </div>
+        <div class="skill-box" data-aos="fade-up" data-aos-duration="1500">
+          <i class="fab fa-python python"></i> Python
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ offset: 0 });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
