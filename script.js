@@ -8,7 +8,7 @@ function cancel() {
   navbar.style.transform = "translateY(-500px)";
 }
 
-const texts = ["PROGRAMMER", "INFORMATIC", "STUDENT"];
+const texts = ["INFORMATIC", "PROGRAMMER", "DEVELOPER", "DESIGNER", "HACKER", "FRONT-END", "BACK-END", "FULL-STACK"];
 let speed = 100;
 const textElements = document.querySelector(".typewriter-text");
 let textIndex = 0;

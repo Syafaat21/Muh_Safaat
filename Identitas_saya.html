@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Curriculum Vitae</title>
+        <style>
+            .cv-page {
+                width: min(1100px, 90%);
+                margin: 0 auto;
+                padding: 2rem 0 4rem;
+                color: white;
+            }
+
+            .cv-hero {
+                display: grid;
+                grid-template-columns: 1fr 220px;
+                gap: 2rem;
+                align-items: center;
+                padding: 2.5rem;
+                border: 1px solid rgba(7, 123, 50, 0.5);
+                border-radius: 12px;
+                background: linear-gradient(135deg, rgba(7, 123, 50, 0.16), rgba(0, 0, 0, 0.85));
+                box-shadow: 0 0 35px rgba(7, 123, 50, 0.15);
+            }
+
+            .cv-kicker {
+                color: #077b32;
+                font-size: 0.85rem;
+                font-weight: 600;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .cv-hero h1 {
+                margin: 0.35rem 0 0.75rem;
+                font-size: clamp(2rem, 5vw, 3.6rem);
+            }
+
+            .cv-hero h1 span,
+            .cv-section h2 {
+                color: #077b32;
+                text-shadow: 0 0 10px #077b32;
+            }
+
+            .cv-hero p {
+                max-width: 620px;
+                color: #d4d4d4;
+                line-height: 1.7;
+            }
+
+            .cv-photo {
+                width: 190px;
+                height: 190px;
+                justify-self: center;
+                border: 4px solid #077b32;
+                border-radius: 50%;
+                box-shadow: 0 0 30px rgba(7, 123, 50, 0.75);
+                object-fit: cover;
+            }
+
+            .cv-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.25rem;
+                margin-top: 1.25rem;
+                align-items: start;
+            }
+
+            .cv-section {
+                height: auto;
+                min-height: 0;
+                padding: 1.5rem;
+                border-left: 3px solid #077b32;
+                border-radius: 8px;
+                background: #101010;
+            }
+
+            .cv-section h2 {
+                margin-bottom: 1rem;
+                font-size: 1.1rem;
+            }
+
+            .cv-list {
+                display: grid;
+                gap: 0.7rem;
+                padding: 0;
+                list-style: none;
+                color: #e8e8e8;
+                line-height: 1.5;
+            }
+
+            .cv-list li::before {
+                margin-right: 0.6rem;
+                color: #077b32;
+                content: "//";
+                font-weight: 700;
+            }
+
+            @media (max-width: 884px) {
+                .cv-page {
+                    width: calc(100% - 2rem);
+                    padding-top: 1rem;
+                }
+
+                .cv-hero {
+                    grid-template-columns: 1fr;
+                    padding: 1.5rem;
+                    text-align: center;
+                }
+
+                .cv-hero p {
+                    margin: 0 auto;
+                    text-align: justify;
+                }
+
+                .cv-photo {
+                    grid-row: 1;
+                    width: 150px;
+                    height: 150px;
+                }
+
+                .cv-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-container">
+                <div class="logo"><span>Muh Safaat</span></div>
+                <div class="links">
+                    <a href="index.html">Beranda</a>
+                    <a href="about.html">Tentang</a>
+                    <a href="skills.html">Keahlian</a>
+                    <a href="services.html">Layanan</a>
+                    <a href="contact.html">Kontak</a>
+                </div>
+                <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+            </div>
+            <div class="dropdown">
+                <div class="links">
+                    <a href="index.html">Beranda</a>
+                    <a href="about.html">Tentang</a>
+                    <a href="skills.html">Keahlian</a>
+                    <a href="services.html">Layanan</a>
+                    <a href="contact.html">Kontak</a>
+                    <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+                </div>
+            </div>
+        </nav>
+
+        <main class="cv-page">
+            <header class="cv-hero">
+                <div>
+                    <div class="cv-kicker">Curriculum Vitae</div>
+                    <h1><span>Muh Safaat</span></h1>
+                    <p>Mahasiswa Teknik Informatika dengan minat dalam pengembangan perangkat lunak, manajemen data, dan keamanan sistem.</p>
+                </div>
+                <img class="cv-photo" src="safaat.jpg" alt="Muh Safaat" />
+            </header>
+
+            <div class="cv-grid">
+                <section class="cv-section">
+                    <h2>Identitas</h2>
+                    <ul class="cv-list">
+                        <li>Nama : Muh Safaat</li>
+                        <li>Jenis Kelamin : Laki-Laki</li>
+                        <li>Alamat : Sarjo</li>
+                        <li>Agama : Islam</li>
+                        <li>Status : Belum Kawin</li>
+                        <li>TTL : Sarjo, 21 Maret 2005</li>
+                        <li>Kewarganegaraan : WNI</li>
+                    </ul>
+                </section>
+
+                <section class="cv-section">
+                    <h2>Pendidikan Formal</h2>
+                    <ul class="cv-list">
+                        <li>2011-2017 SDN UJUNG SOLI</li>
+                        <li>2017-2020 SMPN 01 SARJO</li>
+                        <li>2020-2023 SMAN 01 SARJO</li>
+                        <li>2023-Now UNIVERSITAS ISLAM NEGERI DATOKARAMA PALU</li>
+                    </ul>
+                </section>
+
+                <section class="cv-section">
+                    <h2>Pengalaman Kerja</h2>
+                    <ul class="cv-list">
+                        <li>Mahasiswa</li>
+                        <li>Buat Website</li>
+                        <li>Pengangguran</li>
+                    </ul>
+                </section>
+
+                <section class="cv-section">
+                    <h2>Pengalaman Organisasi</h2>
+                    <ul class="cv-list">
+                        <li>OSIS</li>
+                        <li>PMR</li>
+                        <li>PRAMUKA</li>
+                        <li>HMJ INFORMATIKA</li>
+                        <li>Dema FSAINTEK</li>
+                        <li>LDK AL-ABRAR</li>
+                        <li>LMS Sarjo</li>
+                    </ul>
+                </section>
+
+                <section class="cv-section">
+                    <h2>Kemampuan</h2>
+                    <ul class="cv-list">
+                        <li>NGODING 20%</li>
+                        <li>DESAIN 20%</li>
+                        <li>HACKING 20%</li>    
+                        <li>TEKNOLOGI 20%</li>
+                        <li>MARKETING 20%</li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
