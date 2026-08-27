@@ -281,8 +281,8 @@ body {
 /* Penyesuaian untuk layar kecil */
 @media (max-width: 440px) {
   .main-container .image {
-    width: 280px;
-    height: 280px;
+    width: 220px;
+    height: 220px;
   }
 
   .content {
