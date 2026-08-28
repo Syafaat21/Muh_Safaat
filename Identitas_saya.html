@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="stylesheet" href="style.css" />
         <title>Curriculum Vitae</title>
         <style>
@@ -24,6 +25,12 @@
                 border-radius: 12px;
                 background: linear-gradient(135deg, rgba(7, 123, 50, 0.16), rgba(0, 0, 0, 0.85));
                 box-shadow: 0 0 35px rgba(7, 123, 50, 0.15);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .cv-hero:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 0 45px rgba(7, 123, 50, 0.3);
             }
 
             .cv-kicker {
@@ -76,6 +83,12 @@
                 border-left: 3px solid #077b32;
                 border-radius: 8px;
                 background: #101010;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .cv-section:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 0 22px rgba(7, 123, 50, 0.35);
             }
 
             .cv-section h2 {
@@ -97,6 +110,18 @@
                 color: #077b32;
                 content: "//";
                 font-weight: 700;
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                .cv-hero,
+                .cv-section {
+                    transition: none;
+                }
+
+                .cv-hero:hover,
+                .cv-section:hover {
+                    transform: none;
+                }
             }
 
             @media (max-width: 884px) {
@@ -131,13 +156,13 @@
     <body>
         <nav>
             <div class="nav-container">
-                <div class="logo"><span>Muh Safaat</span></div>
+                <div class="logo" data-aos="zoom-in" data-aos-duration="1500"><span>Muh Safaat</span></div>
                 <div class="links">
-                    <a href="index.html">Beranda</a>
-                    <a href="about.html">Tentang</a>
-                    <a href="skills.html">Keahlian</a>
-                    <a href="services.html">Layanan</a>
-                    <a href="contact.html">Kontak</a>
+                    <a href="index.html" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">Beranda</a>
+                    <a href="about.html" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">Tentang</a>
+                    <a href="skills.html" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">Keahlian</a>
+                    <a href="services.html" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">Layanan</a>
+                    <a href="contact.html" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">Kontak</a>
                 </div>
                 <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
             </div>
@@ -154,17 +179,17 @@
         </nav>
 
         <main class="cv-page">
-            <header class="cv-hero">
+            <header class="cv-hero" data-aos="fade-down" data-aos-duration="1500">
                 <div>
                     <div class="cv-kicker">Curriculum Vitae</div>
                     <h1><span>Muh Safaat</span></h1>
                     <p>Mahasiswa Teknik Informatika dengan minat dalam pengembangan perangkat lunak, manajemen data, dan keamanan sistem.</p>
                 </div>
-                <img class="cv-photo" src="safaat.jpg" alt="Muh Safaat" />
+                <img class="cv-photo" src="safaat.jpg" alt="Muh Safaat" data-aos="zoom-in" data-aos-duration="1800" />
             </header>
 
             <div class="cv-grid">
-                <section class="cv-section">
+                <section class="cv-section" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
                     <h2>Identitas</h2>
                     <ul class="cv-list">
                         <li>Nama : Muh Safaat</li>
@@ -177,7 +202,7 @@
                     </ul>
                 </section>
 
-                <section class="cv-section">
+                <section class="cv-section" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
                     <h2>Pendidikan Formal</h2>
                     <ul class="cv-list">
                         <li>2011-2017 SDN UJUNG SOLI</li>
@@ -187,7 +212,7 @@
                     </ul>
                 </section>
 
-                <section class="cv-section">
+                <section class="cv-section" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
                     <h2>Pengalaman Kerja</h2>
                     <ul class="cv-list">
                         <li>Mahasiswa</li>
@@ -196,11 +221,10 @@
                     </ul>
                 </section>
 
-                <section class="cv-section">
+                <section class="cv-section" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
                     <h2>Pengalaman Organisasi</h2>
                     <ul class="cv-list">
                         <li>OSIS</li>
-                        <li>PMR</li>
                         <li>PRAMUKA</li>
                         <li>HMJ INFORMATIKA</li>
                         <li>Dema FSAINTEK</li>
@@ -209,19 +233,23 @@
                     </ul>
                 </section>
 
-                <section class="cv-section">
+                <section class="cv-section" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
                     <h2>Kemampuan</h2>
                     <ul class="cv-list">
-                        <li>NGODING 20%</li>
-                        <li>DESAIN 20%</li>
-                        <li>HACKING 20%</li>    
-                        <li>TEKNOLOGI 20%</li>
-                        <li>MARKETING 20%</li>
+                        <li>NGODING</li>
+                        <li>DESAIN</li>
+                        <li>HACKING</li>    
+                        <li>TEKNOLOGI</li>
+                        <li>MARKETING</li>
                     </ul>
                 </section>
             </div>
         </main>
 
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({ offset: 0 });
+        </script>
         <script src="script.js"></script>
     </body>
 </html>
