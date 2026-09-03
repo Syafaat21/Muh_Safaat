@@ -147,11 +147,21 @@
 
               let formData = new FormData(this);
 
+              const button = this.querySelector("button[type='submit']");
+              button.disabled = true;
+              button.textContent = "Mengirim...";
+
               fetch("process_contact.php", {
                 method: "POST",
                 body: formData,
               })
-                .then((response) => response.json())
+                .then(async (response) => {
+                  const data = await response.json();
+                  if (!response.ok) {
+                    throw new Error(data.message || "Server gagal memproses pesan.");
+                  }
+                  return data;
+                })
                 .then((data) => {
                   if (data.status === "success") {
                     Swal.fire({
@@ -172,8 +182,14 @@
                   Swal.fire({
                     icon: "error",
                     title: "Oops...",
-                    text: "Terjadi kesalahan, coba lagi nanti.",
+                    text:
+                      error.message ||
+                      "Tidak dapat terhubung ke server. Pastikan situs dijalankan melalui server PHP.",
                   });
+                })
+                .finally(() => {
+                  button.disabled = false;
+                  button.textContent = "Kirim Pesan";
                 });
             });
         </script>
