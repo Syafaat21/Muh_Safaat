@@ -127,7 +127,13 @@
         data-aos="fade-up"
         data-aos-duration="1500"
       >
-        <form id="contactForm">
+        <form
+          id="contactForm"
+          action="https://formsubmit.co/muhsafaat21@gmail.com"
+          method="POST"
+        >
+          <input type="hidden" name="_subject" value="Pesan dari Website Portfolio" />
+          <input type="hidden" name="_captcha" value="false" />
           <input type="text" name="name" placeholder="Nama Anda" required />
           <input type="email" name="email" placeholder="Email Anda" required />
           <textarea
@@ -151,30 +157,40 @@
               button.disabled = true;
               button.textContent = "Mengirim...";
 
-              fetch("process_contact.php", {
+              fetch("https://formsubmit.co/ajax/muhsafaat21@gmail.com", {
                 method: "POST",
                 body: formData,
               })
                 .then(async (response) => {
-                  const data = await response.json();
+                  const responseText = await response.text();
+                  let data;
+
+                  try {
+                    data = JSON.parse(responseText);
+                  } catch (error) {
+                    throw new Error(
+                      "Layanan formulir tidak dapat dihubungi. Periksa koneksi internet Anda."
+                    );
+                  }
+
                   if (!response.ok) {
                     throw new Error(data.message || "Server gagal memproses pesan.");
                   }
                   return data;
                 })
                 .then((data) => {
-                  if (data.status === "success") {
+                  if (data.success === true || data.success === "true") {
                     Swal.fire({
                       icon: "success",
                       title: "Berhasil!",
-                      text: data.message,
+                      text: data.message || "Pesan berhasil dikirim!",
                     });
                     document.getElementById("contactForm").reset();
                   } else {
                     Swal.fire({
                       icon: "error",
                       title: "Oops...",
-                      text: data.message,
+                      text: data.message || "Pesan gagal dikirim.",
                     });
                   }
                 })
@@ -184,7 +200,7 @@
                     title: "Oops...",
                     text:
                       error.message ||
-                      "Tidak dapat terhubung ke server. Pastikan situs dijalankan melalui server PHP.",
+                      "Tidak dapat terhubung ke layanan formulir. Coba lagi nanti.",
                   });
                 })
                 .finally(() => {
